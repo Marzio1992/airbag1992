@@ -1,0 +1,176 @@
+/* Fondo general con imagen angelical */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Dancing Script', cursive, 'Open Sans', sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  position: relative;
+}
+
+/* Overlay blanco translúcido */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenedor principal más chico */
+.page-container {
+  position: relative;
+  z-index: 1;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 2rem 2.5rem;
+}
+
+/* Título principal */
+.main-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #4a2f1a;
+  text-shadow: 3px 3px 5px #cbb49e;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Contenedor del formulario y tarjeta */
+.content-wrapper {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Formulario estilizado */
+.formulario {
+  background: #fff4ef;
+  border-radius: 16px;
+  width: 320px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgb(189 121 62 / 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Inputs */
+.formulario input[type="text"],
+.formulario input[type="file"] {
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  border: 2px solid #cbb49e;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="file"]:focus {
+  outline: none;
+  border-color: #a56b3c;
+  box-shadow: 0 0 10px rgb(165 107 60 / 0.6);
+}
+
+/* Botón */
+#descargar-btn {
+  background-color: #a56b3c;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 14px 0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+#descargar-btn:hover {
+  background-color: #7a4f23;
+}
+
+/* Tarjeta con fondo angelical */
+#card {
+  width: 320px;
+  height: 480px;
+  background-image: url('https://i.imgur.com/hAUhJsf.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgb(189 121 62 / 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  color: #3f2f20;
+}
+
+/* Imagen en la tarjeta */
+#foto {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #f7e6dc;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+/* Textos artísticos */
+.text-field {
+  width: 90%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px rgba(247, 230, 220, 0.7);
+  margin: 6px 0;
+}
+
+#nombre {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+#fecha {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  color: #6e5843;
+}
+
+#mensaje {
+  font-size: 18px;
+  font-weight: 600;
+  color: #5c4a36;
+}
+
+/* Responsive en móviles */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+body {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Dancing Script', cursive;
+}
